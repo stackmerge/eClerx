@@ -1,0 +1,40 @@
+#%RAML 1.0 DataType
+additionalProperties: false
+properties:
+  accountNum: 
+    type: string
+    required: true
+    minLength: 10
+    maxLength: 10
+    example:
+      "A121210001"
+  atmPin:
+    type: string
+    pattern: ^[0-9]*$
+    required: true
+    minLength: 4
+    maxLength: 4
+    example:
+      "1111"
+  ifscCode:
+    type: string
+    required: true
+    minLength: 4
+    maxLength: 10
+    example: "1234"
+
+  depositAmount:
+    type: number
+    required: false
+  mailId: 
+    type: string
+    required: true
+    pattern: ^([a-zA-Z0-9]+([._-]?)+[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,})$ 
+    example:
+      "ambika.k@gmail.com"
+
+  phoneNo:
+    type: string
+    required: true
+    pattern: ^\d{3}-\d{3}-\d{4}$
+    example: 123-028-1237
